@@ -1,0 +1,25 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="briani99.ui5.controller.Main"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>title}"
+					backgroundDesign="List">
+					<VBox
+						width= "100%"
+						height="100%"
+						fitContainer="true"
+						justifyContent="SpaceAround"
+						alignItems="Center">
+						<StandardTile press="onListTilePressed"
+							title="Search by Name"
+							icon="sap-icon://building">
+						</StandardTile>
+						<StandardTile press="onMapTilePressed"
+							title="Search by Map"
+							icon="sap-icon://building">
+						</StandardTile>
+					</VBox>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

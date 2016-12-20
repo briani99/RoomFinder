@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="briani99.ui5.controller.RoomDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{name}"
+					enableScrolling="false"
+					showNavButton="true"
+     				navButtonPress="onNavBack"
+					backgroundDesign="List">
+					<VBox
+						width= "100%"
+						height="100%"
+						class="clBox"
+						fitContainer="true"
+						justifyContent="Center"
+						alignItems="Center">
+						<Image 
+							id="roomImage"
+							class="clMap" 
+							src="{map}"
+							densityAware="true">
+						</Image>
+		
+					</VBox>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

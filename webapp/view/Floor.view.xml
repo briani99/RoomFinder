@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="briani99.ui5.controller.Floor"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Page title="Select Area"
+		showNavButton="true"
+        backgroundDesign="List"
+        navButtonPress="onMoveContextBack">
+			<List id="floorList">
+				
+			</List>
+	</Page>
+</mvc:View>

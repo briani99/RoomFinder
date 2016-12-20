@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="briani99.ui5.controller.RoomList"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page 
+				title="Search Rooms"
+				showNavButton="true"
+     			backgroundDesign="List"
+     			navButtonPress="onNavBack">
+				<content>
+					<VBox>
+						<SearchField
+							tooltip="Search for rooms"
+	        				liveChange="onFilterList">
+						</SearchField>
+						<List
+							id="lRooms"
+							headerText="List all Rooms"
+							width="100%">
+						</List>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

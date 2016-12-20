@@ -1,0 +1,142 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "briani99.ui5",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "briani99.ui5.view.App",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "briani99.ui5.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"transition": "Flip"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "Main"
+				},
+				{
+					"pattern": "rooms",
+					"name": "rooms",
+					"target": "allRooms"
+				},
+				{
+					"pattern": "roomdetails/{id}",
+					"name": "roomDetails",
+					"target": "roomDetails"
+				},
+				{
+					"pattern": "fingerdetails/{floor}/{finger}",
+					"name": "fingerDetails",
+					"target": "roomDetails"
+				},
+				{
+					"pattern": "floor",
+					"name": "floor",
+					"target": "floor"
+				},
+				{
+					"pattern": "floor/{floor}",
+					"name": "floorDetails",
+					"target": "floor"
+				}
+			],
+			"targets": {
+				"Main": {
+					"viewName": "Main",
+					"viewId": "main",
+					"viewLevel": 1
+				},
+				"floor": {
+					"viewName": "Floor",
+					"viewId": "floor",
+					"viewLevel": 2
+				},
+				"allRooms": {
+					"viewName": "RoomList",
+					"viewId": "roomlist",
+					"viewLevel": 2
+				},
+				"roomDetails": {
+					"viewName": "RoomDetail",
+					"viewId": "roomdetail",
+					"viewLevel": 3
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "briani99.ui5.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
